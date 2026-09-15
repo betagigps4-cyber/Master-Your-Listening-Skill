@@ -1,0 +1,7 @@
+{
+  "name": "ListenMaster - Adaptive Listening & Assessment Ecosystem",
+  "description": "Interactive audio listening exercises with real-time speech synthesis, adaptive difficulty algorithm, personalized performance metrics, educator analytics dashboard, and exportable progress reports.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
