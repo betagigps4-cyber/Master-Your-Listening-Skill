@@ -7,6 +7,7 @@ import { VoiceId } from '../types';
 
 interface TranscriptViewerProps {
   transcript: string;
+  scenarioTitle?: string;
   onWordLookup?: (word: string) => void;
   className?: string;
   showSpeakerBadges?: boolean;
@@ -19,6 +20,7 @@ interface SelectionState {
 
 export const TranscriptViewer: React.FC<TranscriptViewerProps> = ({
   transcript,
+  scenarioTitle,
   onWordLookup,
   className = '',
   showSpeakerBadges = true
@@ -186,6 +188,8 @@ export const TranscriptViewer: React.FC<TranscriptViewerProps> = ({
           word={selection.word}
           position={selection.position}
           onClose={() => setSelection(null)}
+          scenarioTranscript={transcript}
+          scenarioTitle={scenarioTitle}
         />
       )}
     </div>

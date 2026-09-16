@@ -15,6 +15,7 @@ import {
 import { VoiceId, AIExplanation } from '../types';
 import { VOICE_PROFILES } from '../data/scenariosData';
 import { AudioEngine } from '../services/audioEngine';
+import { QuickDictionaryPopover } from './QuickDictionaryPopover';
 
 interface TranscriptSegment {
   id: string;
@@ -49,6 +50,10 @@ export const TranscriptContextInspector: React.FC<TranscriptContextInspectorProp
 }) => {
   const [activePlayingId, setActivePlayingId] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<'focused' | 'full'>('full');
+  const [dictionarySelection, setDictionarySelection] = useState<{
+    word: string;
+    position: { x: number; y: number };
+  } | null>(null);
 
   // Estimate total audio duration
   const estimatedTotalSeconds = Math.round(AudioEngine.getEstimatedDuration(transcript));
@@ -290,7 +295,28 @@ export const TranscriptContextInspector: React.FC<TranscriptContextInspectorProp
                   </div>
                 )}
 
-                <p className="text-xs sm:text-sm leading-relaxed text-white/90 font-mono">
+                <p
+                  className="text-xs sm:text-sm leading-relaxed text-white/90 font-mono select-text"
+                  onMouseUp={(e) => {
+                    e.stopPropagation();
+                    const sel = window.getSelection();
+                    if (sel && !sel.isCollapsed) {
+                      const text = sel.toString().trim();
+                      const word = text.split(/\s+/)[0]?.replace(/^[^\w]+|[^\w]+$/g, '');
+                      if (word && word.length >= 2) {
+                        const range = sel.getRangeAt(0);
+                        const rect = range.getBoundingClientRect();
+                        setDictionarySelection({
+                          word,
+                          position: {
+                            x: rect.left + rect.width / 2,
+                            y: rect.bottom
+                          }
+                        });
+                      }
+                    }
+                  }}
+                >
                   {seg.isMisinterpreted
                     ? renderHighlightedSegmentText(
                         seg.cleanText,
@@ -361,6 +387,16 @@ export const TranscriptContextInspector: React.FC<TranscriptContextInspectorProp
           );
         })}
       </div>
+
+      {/* Quick Dictionary Popover for Inspector selections */}
+      {dictionarySelection && (
+        <QuickDictionaryPopover
+          word={dictionarySelection.word}
+          position={dictionarySelection.position}
+          onClose={() => setDictionarySelection(null)}
+          scenarioTranscript={transcript}
+        />
+      )}
     </div>
   );
 };

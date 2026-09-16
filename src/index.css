@@ -21,6 +21,30 @@
 .bar-4 { animation: barPulse4 0.5s ease-in-out infinite 0.24s; }
 .bar-5 { animation: barPulse5 0.5s ease-in-out infinite 0.32s; }
 
+@keyframes popoverFadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.anim-popover-enter {
+  animation: popoverFadeSlideUp 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInSimple {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.anim-fade {
+  animation: fadeInSimple 0.2s ease-out forwards;
+}
+
 @media print {
   body {
     background: #ffffff !important;

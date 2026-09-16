@@ -31,6 +31,7 @@ import { BadgeService } from '../services/badgeService';
 import { AdaptiveEngine } from '../services/adaptiveEngine';
 import { StorageService } from '../services/storageService';
 import { PhonemeHeatMap } from './PhonemeHeatMap';
+import { SavedWordsHistoryLog } from './SavedWordsHistoryLog';
 
 interface StudentProfileViewProps {
   student: StudentProfile;
@@ -297,6 +298,9 @@ export const StudentProfileView: React.FC<StudentProfileViewProps> = ({
         attempts={attempts}
         onLaunchPhonemeDrills={onNavigateToPhonemeDrill}
       />
+
+      {/* Saved Words History Log from Quick Dictionary */}
+      <SavedWordsHistoryLog onNavigateToPractice={onNavigateToPractice} />
 
       {/* Trophies & Milestones Showcase Header */}
       <div className="space-y-6">

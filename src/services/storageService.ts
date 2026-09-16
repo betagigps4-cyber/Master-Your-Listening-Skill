@@ -1,4 +1,4 @@
-import { AttemptRecord, StudentProfile, EvaluatedBadge } from '../types';
+import { AttemptRecord, StudentProfile, EvaluatedBadge, SavedWordItem } from '../types';
 import { BadgeService } from './badgeService';
 
 const ATTEMPTS_KEY = 'listenmaster_attempts_v2';
@@ -6,6 +6,7 @@ const CURRENT_STUDENT_KEY = 'listenmaster_current_student_v2';
 const COHORT_STUDENTS_KEY = 'listenmaster_cohort_students_v2';
 const WARMUP_SCORES_KEY = 'listenmaster_warmup_scores_v2';
 const DEEP_WORK_STATS_KEY = 'listenmaster_deep_work_stats_v2';
+const SAVED_WORDS_KEY = 'listenmaster_saved_words_v2';
 
 export class StorageService {
   /**
@@ -599,5 +600,103 @@ export class StorageService {
         focusArea: 'Multi-Speaker Transition Tracking'
       }
     ];
+  }
+
+  /**
+   * Retrieves all saved words history
+   */
+  static getSavedWords(): SavedWordItem[] {
+    try {
+      const data = localStorage.getItem(SAVED_WORDS_KEY);
+      if (data) {
+        return JSON.parse(data);
+      }
+    } catch (e) {
+      console.warn('Failed to parse saved words', e);
+    }
+    // Default seed words for listening enrichment
+    return [
+      {
+        id: 'seed-word-1',
+        word: 'actually',
+        phonetic: '/ˈæk.tʃu.ə.li/',
+        partOfSpeech: 'adverb',
+        definition: 'As the truth or facts of a situation; used to introduce a correction or pivot.',
+        exampleSentence: 'I thought the gate was closed, but actually it remained open.',
+        acousticTip: 'Frequently signals discourse contrast or factual pivot in listening tests.',
+        scenarioUsageSnippet: 'Actually, let me double check that room number on the master roster.',
+        scenarioTitle: 'Lecture Hall Directions & Timetables',
+        savedAt: Date.now() - 3600000 * 24
+      },
+      {
+        id: 'seed-word-2',
+        word: 'scratch',
+        phonetic: '/skrætʃ/',
+        partOfSpeech: 'verb',
+        definition: 'In conversational speech: "scratch that" means cancel or ignore the prior statement.',
+        exampleSentence: 'Scratch that earlier estimate; the actual total is higher.',
+        acousticTip: 'Crucial oral self-correction marker in fast speech.',
+        scenarioUsageSnippet: 'Wait, scratch that, the lab moved to the science annex across the quad.',
+        scenarioTitle: 'Campus Navigation & Room Changes',
+        savedAt: Date.now() - 3600000 * 12
+      }
+    ];
+  }
+
+  /**
+   * Saves or updates a word in the user's history log
+   */
+  static saveWord(wordItem: Omit<SavedWordItem, 'id' | 'savedAt'>): SavedWordItem {
+    try {
+      const words = this.getSavedWords();
+      const cleanWord = wordItem.word.trim().toLowerCase();
+      // Check if already exists; if so, update its scenario snippet / timestamp
+      const existingIdx = words.findIndex((w) => w.word.toLowerCase() === cleanWord);
+
+      const newItem: SavedWordItem = {
+        ...wordItem,
+        id: existingIdx >= 0 ? words[existingIdx].id : `saved-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+        savedAt: Date.now()
+      };
+
+      if (existingIdx >= 0) {
+        words[existingIdx] = newItem;
+      } else {
+        words.unshift(newItem);
+      }
+
+      localStorage.setItem(SAVED_WORDS_KEY, JSON.stringify(words));
+      return newItem;
+    } catch (e) {
+      console.warn('Failed to save word to history', e);
+      return {
+        ...wordItem,
+        id: `saved-${Date.now()}`,
+        savedAt: Date.now()
+      };
+    }
+  }
+
+  /**
+   * Removes a saved word from the history log
+   */
+  static removeSavedWord(id: string): void {
+    try {
+      const words = this.getSavedWords().filter((w) => w.id !== id);
+      localStorage.setItem(SAVED_WORDS_KEY, JSON.stringify(words));
+    } catch (e) {
+      console.warn('Failed to remove saved word', e);
+    }
+  }
+
+  /**
+   * Clears all saved words
+   */
+  static clearAllSavedWords(): void {
+    try {
+      localStorage.setItem(SAVED_WORDS_KEY, JSON.stringify([]));
+    } catch (e) {
+      console.warn('Failed to clear saved words', e);
+    }
   }
 }

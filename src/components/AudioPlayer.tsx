@@ -23,6 +23,7 @@ import { QuickDictionaryPopover } from './QuickDictionaryPopover';
 
 interface AudioPlayerProps {
   transcript: string;
+  scenarioTitle?: string;
   isPlaying: boolean;
   activeSpeaker: VoiceId | null;
   progressPercent: number;
@@ -49,6 +50,7 @@ interface TranscriptPhraseChunk {
 
 export const AudioPlayer: React.FC<AudioPlayerProps> = ({
   transcript,
+  scenarioTitle,
   isPlaying,
   activeSpeaker,
   progressPercent,
@@ -442,9 +444,28 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
 
                     {/* Phrase text */}
                     <p
-                      className={`text-xs sm:text-sm leading-relaxed transition-colors ${
+                      className={`text-xs sm:text-sm leading-relaxed transition-colors select-text ${
                         isActive ? 'text-white font-medium' : 'text-white/80 group-hover:text-white'
                       }`}
+                      onMouseUp={(e) => {
+                        e.stopPropagation();
+                        const sel = window.getSelection();
+                        if (sel && !sel.isCollapsed) {
+                          const text = sel.toString().trim();
+                          const word = text.split(/\s+/)[0]?.replace(/^[^\w]+|[^\w]+$/g, '');
+                          if (word && word.length >= 2) {
+                            const range = sel.getRangeAt(0);
+                            const rect = range.getBoundingClientRect();
+                            setDictionarySelection({
+                              word,
+                              position: {
+                                x: rect.left + rect.width / 2,
+                                y: rect.bottom
+                              }
+                            });
+                          }
+                        }
+                      }}
                     >
                       "{chunk.cleanText}"
                     </p>
@@ -574,6 +595,17 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
             })}
           </div>
         </div>
+      )}
+
+      {/* Quick Dictionary Popover for chunk selections */}
+      {dictionarySelection && (
+        <QuickDictionaryPopover
+          word={dictionarySelection.word}
+          position={dictionarySelection.position}
+          onClose={() => setDictionarySelection(null)}
+          scenarioTranscript={transcript}
+          scenarioTitle={scenarioTitle}
+        />
       )}
     </div>
   );

@@ -216,3 +216,21 @@ export interface DeepWorkSession {
   startedAt: number | null;
   completedAt: number | null;
 }
+
+export interface SavedWordItem {
+  id: string;
+  word: string;
+  phonetic: string;
+  partOfSpeech: string;
+  definition: string;
+  simpleDefinition?: string;
+  advancedDefinition?: string;
+  etymology?: string;
+  cefrLevel?: 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
+  exampleSentence?: string;
+  acousticTip?: string;
+  scenarioUsageSnippet?: string;
+  scenarioTitle?: string;
+  synonyms?: string[];
+  savedAt: number;
+}

@@ -50,6 +50,7 @@ import { VoiceWarmupCard } from './components/VoiceWarmupCard';
 import { VoiceWarmupModal } from './components/VoiceWarmupModal';
 import { DeepWorkTimer } from './components/DeepWorkTimer';
 import { DeepWorkGoalModal } from './components/DeepWorkGoalModal';
+import { TranscriptViewer } from './components/TranscriptViewer';
 
 export default function App() {
   // Navigation
@@ -530,6 +531,7 @@ export default function App() {
                     onSpeedChange={setPlaybackSpeed}
                     replaysUsed={replaysUsed}
                     onReplayIncrement={() => setReplaysUsed((r) => r + 1)}
+                    scenarioTitle={currentScenario.title}
                     onPlayToggle={() =>
                       AudioEngine.togglePauseResume(currentScenario.transcript, playbackSpeed)
                     }
@@ -543,16 +545,23 @@ export default function App() {
                     }}
                   />
 
-                  {/* Transcript Reveal Box (Optional) */}
+                  {/* Transcript Reveal Box with Quick Dictionary */}
                   {showTranscript && (
-                    <div className="p-5 rounded-2xl bg-black/40 border border-amber-500/25 space-y-2 anim-fade">
-                      <div className="flex items-center gap-2 text-[10px] font-mono text-amber-400 uppercase tracking-widest">
-                        <Sparkles className="w-3.5 h-3.5" />
-                        <span>Acoustic Transcript (With Speaker Tokens)</span>
+                    <div className="p-5 rounded-2xl bg-black/40 border border-amber-500/25 space-y-3 anim-fade">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2 text-[10px] font-mono text-amber-400 uppercase tracking-widest">
+                          <Sparkles className="w-3.5 h-3.5" />
+                          <span>Acoustic Transcript (Speaker-Tagged Dialogue)</span>
+                        </div>
+                        <span className="text-[10px] font-mono text-white/40">
+                          Highlight or double-click any word for Quick Dictionary
+                        </span>
                       </div>
-                      <p className="text-xs sm:text-sm text-white/70 leading-relaxed font-mono">
-                        {currentScenario.transcript}
-                      </p>
+                      <TranscriptViewer
+                        transcript={currentScenario.transcript}
+                        scenarioTitle={currentScenario.title}
+                        className="bg-transparent"
+                      />
                     </div>
                   )}
 
