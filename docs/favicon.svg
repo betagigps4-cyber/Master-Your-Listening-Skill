@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="8" fill="#0C0F17"/>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="7.5" stroke="#F97316" stroke-opacity="0.3"/>
+  <!-- Headphone band -->
+  <path d="M7 16C7 11.0294 11.0294 7 16 7C20.9706 7 25 11.0294 25 16" stroke="#F97316" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Left earpad -->
+  <rect x="5.5" y="15" width="3.5" height="7" rx="1.75" fill="#F97316"/>
+  <!-- Right earpad -->
+  <rect x="23" y="15" width="3.5" height="7" rx="1.75" fill="#F97316"/>
+  <!-- Soundwave center -->
+  <path d="M12 17V19" stroke="#FDBA74" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M14.5 15V21" stroke="#FDBA74" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M17.5 13.5V22.5" stroke="#FDBA74" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M20 16V20" stroke="#FDBA74" stroke-width="1.8" stroke-linecap="round"/>
+</svg>
