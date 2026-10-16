@@ -550,5 +550,115 @@ export const scenariosAdvancePrimary: Record<string, Scenario[]> = {
         { id: "ap50q2", text: "How many storybooks did the student purchase?", options: ["Two", "Three", "Four", "Five"], correct: "Three", category: "numbers" }
       ]
     }
+  ],
+  "Section 51": [
+    {
+      title: "A Trip to the Tea Gardens of Sreemangal",
+      description: "A narrative about walking through the rolling green hills and tea plantations.",
+      transcript: "[M5]Walking through the rolling green tea plantations in Sreemangal.[M3]Last December, my family traveled to Sreemangal by train. We woke up early in the morning to walk through the misty green hills of the Finlay tea estate. We watched tea workers wearing colorful bamboo baskets on their backs, expertly plucking fresh two leaves and a bud. Later, we tasted hot seven-color layered tea at a small roadside stall.",
+      questions: [
+        { id: "ap51q1", text: "In which town are the tea plantations located?", options: ["Sylhet town", "Sreemangal", "Habiganj", "Moulvibazar"], correct: "Sreemangal", category: "factual" },
+        { id: "ap51q2", text: "What special beverage did the family taste at the roadside stall?", options: ["Ginger milk tea", "Seven-color layered tea", "Iced lemon tea", "Green herbal tea"], correct: "Seven-color layered tea", category: "factual" }
+      ]
+    }
+  ],
+  "Section 52": [
+    {
+      title: "The Annual Sports Day March-Past",
+      description: "An exciting recount of a school's annual athletic competition and march-past.",
+      transcript: "[M5]An exciting recount of our school's annual athletic meet.[F2]On a sunny Thursday morning, our school organized its 25th Annual Sports Day on the central playground. All students formed four colored house teams: Red, Blue, Green, and Yellow. Our Green House won the march-past trophy, while my classmate Tanvir ran fast and secured first place in the 100-meter sprint race.",
+      questions: [
+        { id: "ap52q1", text: "Which house won the march-past trophy?", options: ["Red House", "Blue House", "Green House", "Yellow House"], correct: "Green House", category: "factual" },
+        { id: "ap52q2", text: "In which race did Tanvir secure first place?", options: ["50-meter sprint", "100-meter sprint race", "200-meter hurdles", "400-meter relay"], correct: "100-meter sprint race", category: "factual" }
+      ]
+    }
+  ],
+  "Section 53": [
+    {
+      title: "Sunset at Cox's Bazar Beach",
+      description: "A vivid memory of walking along the world's longest natural sea beach.",
+      transcript: "[M5]A vivid memory of watching the sunset at Cox's Bazar.[M1]Cox's Bazar has the longest unbroken sandy sea beach in the world. As the afternoon cooled down, my sister and I collected smooth pink seashells along the shoreline of Laboni point. At exactly quarter to six, the crimson sun sank into the Bay of Bengal, turning the foaming ocean waves a brilliant golden shade.",
+      questions: [
+        { id: "ap53q1", text: "Which beach point did they visit to collect seashells?", options: ["Inani beach", "Himchari beach", "Laboni point", "Kolatoli beach"], correct: "Laboni point", category: "factual" },
+        { id: "ap53q2", text: "At what time did the sun sink into the sea?", options: ["Quarter past five", "Quarter to six", "Six o'clock", "Half past six"], correct: "Quarter to six", category: "numbers" }
+      ]
+    }
+  ],
+  "Section 54": [
+    {
+      title: "Baishakhi Mela and Folk Toys",
+      description: "Celebrating the Bengali New Year with vibrant colors, flutes, and masks.",
+      transcript: "[M5]Celebrating the Bengali New Year at the local fair.[F4]On Pahela Baishakh, our whole family dressed in traditional red and white clothes to attend the local village fair. The fairground smelled of freshly roasted batasha and crunchy jilapi. My little brother bought a hand-painted wooden horse and a red clay flute for fifty taka, while I enjoyed watching the colorful puppet dance show.",
+      questions: [
+        { id: "ap54q1", text: "What traditional attire colors did the family wear on Pahela Baishakh?", options: ["Blue and yellow", "Red and white", "Green and orange", "Purple and pink"], correct: "Red and white", category: "factual" },
+        { id: "ap54q2", text: "How much did the brother spend on the wooden horse and clay flute?", options: ["Thirty taka", "Forty taka", "Fifty taka", "Sixty taka"], correct: "Fifty taka", category: "numbers" }
+      ]
+    }
+  ],
+  "Section 55": [
+    {
+      title: "A Night Camp in the Sundarbans",
+      description: "A thrilling wildlife experience on a tour boat deep inside the mangrove forest.",
+      transcript: "[M5]A wildlife adventure inside the mangrove forest.[M2]During our winter vacation, we boarded a three-day cruise boat into the dense Sundarbans forest. As evening fell near Kotka beach, our forest guide pointed his binoculars toward the riverbank. We spotted three spotted deer drinking fresh water near a muddy creek and heard the sudden, sharp call of a kingfisher perched high on a sundari tree.",
+      questions: [
+        { id: "ap55q1", text: "Near which location did the tour boat anchor as evening fell?", options: ["Hiron Point", "Kotka beach", "Dublar Char", "Karamjal"], correct: "Kotka beach", category: "factual" },
+        { id: "ap55q2", text: "How many spotted deer did they observe near the muddy creek?", options: ["Two", "Three", "Four", "Five"], correct: "Three", category: "numbers" }
+      ]
+    }
+  ],
+  "Section 56": [
+    {
+      title: "The Village Weaver and Traditional Jamdani",
+      description: "Watching master handloom weavers create delicate Jamdani sarees in Sonargaon.",
+      transcript: "[M5]Watching master artisans weave delicate fabrics in Sonargaon.[F3]Last Saturday, our art club traveled to a historic weaving village in Sonargaon. We sat beside an elderly weaver named Master Rafiq, who sat before a pit-loom. He explained how fine cotton threads are woven by hand with intricate geometric floral motifs. It takes two skilled artisans over four months to complete just one authentic Jamdani saree!",
+      questions: [
+        { id: "ap56q1", text: "What type of loom was Master Rafiq working on?", options: ["Electric power loom", "Pit-loom", "Mechanical spindle", "Knitting machine"], correct: "Pit-loom", category: "factual" },
+        { id: "ap56q2", text: "How many months does it take two artisans to finish one authentic Jamdani saree?", options: ["Two months", "Three months", "Over four months", "Six months"], correct: "Over four months", category: "numbers" }
+      ]
+    }
+  ],
+  "Section 57": [
+    {
+      title: "Stargazing at the Science Planetarium",
+      description: "Discovering constellations, planets, and galaxies at the Bangabandhu Planetarium.",
+      transcript: "[M5]Discovering the planets and stars at the city planetarium.[M4]Last Sunday, our school science club visited the Bangabandhu Novo Theatre in Bijoy Sarani. Inside the massive domed projection hall, the room went completely dark. Suddenly, thousands of glowing stars, the fiery red surface of Mars, and the giant rings of Saturn floated above our heads during the forty-minute cosmic show.",
+      questions: [
+        { id: "ap57q1", text: "Where is the science planetarium situated?", options: ["Farmgate", "Bijoy Sarani", "Dhanmondi", "Mohakhali"], correct: "Bijoy Sarani", category: "factual" },
+        { id: "ap57q2", text: "How long did the cosmic dome show last?", options: ["Twenty minutes", "Thirty minutes", "Forty minutes", "One hour"], correct: "Forty minutes", category: "numbers" }
+      ]
+    }
+  ],
+  "Section 58": [
+    {
+      title: "Making Hand-Crafted Nakshi Kantha",
+      description: "Learning the art of traditional embroidered quilt making from an aunt.",
+      transcript: "[M5]Learning the traditional art of embroidered quilts.[F1]During the monsoon holidays, my aunt Jahanara taught me how to sew a Nakshi Kantha quilt. She reused four layers of soft old cotton saris and stitched them together using colorful spun threads. In the center, she embroidered a royal lotus motif bordered by delicate vines, taking nearly three weeks of patient needlework.",
+      questions: [
+        { id: "ap58q1", text: "What motif did Aunt Jahanara embroider in the center of the quilt?", options: ["Peacock motif", "Royal lotus motif", "Mango motif", "Elephant motif"], correct: "Royal lotus motif", category: "factual" },
+        { id: "ap58q2", text: "How many layers of soft cotton saris were used to make the quilt?", options: ["Two layers", "Three layers", "Four layers", "Five layers"], correct: "Four layers", category: "numbers" }
+      ]
+    }
+  ],
+  "Section 59": [
+    {
+      title: "The Rainy Day Paper Boat Regatta",
+      description: "Children floating homemade colorful paper boats down a courtyard stream.",
+      transcript: "[M5]Children racing homemade paper boats during heavy monsoon rain.[M3]Yesterday afternoon, heavy torrential rain flooded the courtyard behind our village house. My cousins and I made eight colorful paper boats out of recycled notebook pages and old newspaper sheets. We launched them into the rushing courtyard stream and cheered as my blue paper boat navigated past floating leaves to win the race.",
+      questions: [
+        { id: "ap59q1", text: "How many paper boats did the children make altogether?", options: ["Six", "Seven", "Eight", "Ten"], correct: "Eight", category: "numbers" },
+        { id: "ap59q2", text: "Which color paper boat won the courtyard race?", options: ["Red paper boat", "Blue paper boat", "Yellow paper boat", "Green paper boat"], correct: "Blue paper boat", category: "factual" }
+      ]
+    }
+  ],
+  "Section 60": [
+    {
+      title: "A Visit to Ahsan Manzil on the Buriganga",
+      description: "Touring the historic Pink Palace on the banks of the Buriganga River.",
+      transcript: "[M5]Touring the historic Pink Palace on the riverbank.[F5]During our Dhaka heritage tour, we visited the grand Ahsan Manzil, commonly known as the Pink Palace. Built beside the bustling Buriganga river, this impressive historic palace has twenty-three exhibition rooms filled with crystal chandeliers, antique furniture, and vintage portraits of the Nawabs of Dhaka.",
+      questions: [
+        { id: "ap60q1", text: "On the banks of which river is Ahsan Manzil situated?", options: ["Turag river", "Shitalakshya river", "Buriganga river", "Dhaleshwari river"], correct: "Buriganga river", category: "factual" },
+        { id: "ap60q2", text: "How many exhibition rooms are there inside Ahsan Manzil?", options: ["Eighteen", "Twenty", "Twenty-three", "Twenty-five"], correct: "Twenty-three", category: "numbers" }
+      ]
+    }
   ]
 };

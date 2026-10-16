@@ -550,5 +550,115 @@ export const scenariosPrimary: Record<string, Scenario[]> = {
         { id: "s53q2", text: "How many flowering bushes did they plant along the fence?", options: ["Six", "Eight", "Ten", "Twelve"], correct: "Twelve", category: "numbers" }
       ]
     }
+  ],
+  "Section 54": [
+    {
+      title: "School Garden Harvest",
+      description: "Students harvesting vegetables grown in their school garden.",
+      transcript: "[M5]School Garden Harvest.[M3] This morning during agriculture club, we visited our school garden. We pulled eight large orange carrots from the soil and picked fifteen fresh red tomatoes to give to the cafeteria.",
+      questions: [
+        { id: "s54q1", text: "How many carrots did the students pull from the soil?", options: ["Six", "Eight", "Ten", "Twelve"], correct: "Eight", category: "numbers" },
+        { id: "s54q2", text: "Where will the harvested vegetables be taken?", options: ["To the market", "To the cafeteria", "To the principal's office", "To a local restaurant"], correct: "To the cafeteria", category: "factual" }
+      ]
+    }
+  ],
+  "Section 55": [
+    {
+      title: "Visiting the Zoo",
+      description: "A family trip to see the giraffes and monkeys at the zoo.",
+      transcript: "[F5]Visiting the Zoo.[F2] Last Sunday, my parents took my younger brother and me to the city zoo. Our favorite part was the giraffe enclosure, where we watched a tall mother giraffe eating fresh acacia leaves at eleven o'clock.",
+      questions: [
+        { id: "s55q1", text: "Which animal enclosure was the family's favorite?", options: ["The tiger enclosure", "The giraffe enclosure", "The elephant pool", "The monkey trees"], correct: "The giraffe enclosure", category: "factual" },
+        { id: "s55q2", text: "What time did they watch the mother giraffe eating leaves?", options: ["Nine o'clock", "Ten o'clock", "Eleven o'clock", "Twelve o'clock"], correct: "Eleven o'clock", category: "numbers" }
+      ]
+    }
+  ],
+  "Section 56": [
+    {
+      title: "Baking Banana Bread",
+      description: "A boy helping his father bake fresh banana bread on a rainy afternoon.",
+      transcript: "[M5]Baking Banana Bread.[M4] Since it was raining outside, my father and I baked warm banana bread. We mashed three ripe bananas in a glass bowl, added two cups of flour, and baked it in the oven for forty minutes.",
+      questions: [
+        { id: "s56q1", text: "How many ripe bananas did they mash?", options: ["Two", "Three", "Four", "Five"], correct: "Three", category: "numbers" },
+        { id: "s56q2", text: "How long was the banana bread baked in the oven?", options: ["Twenty minutes", "Thirty minutes", "Forty minutes", "Fifty minutes"], correct: "Forty minutes", category: "numbers" }
+      ]
+    }
+  ],
+  "Section 57": [
+    {
+      title: "Buying New Shoes",
+      description: "A girl shopping with her mother for sports sneakers at the shoe shop.",
+      transcript: "[F4]Buying New Shoes.[F3] Excuse me, do you have these blue running shoes in size thirty-four? [M2] Yes, miss! We have that size in stock. They are comfortable for school sports and cost eight hundred taka.",
+      questions: [
+        { id: "s57q1", text: "What shoe size is the customer looking for?", options: ["Size thirty-two", "Size thirty-four", "Size thirty-six", "Size thirty-eight"], correct: "Size thirty-four", category: "numbers" },
+        { id: "s57q2", text: "How much do the blue running shoes cost?", options: ["Six hundred taka", "Seven hundred taka", "Eight hundred taka", "Nine hundred taka"], correct: "Eight hundred taka", category: "numbers" }
+      ]
+    }
+  ],
+  "Section 58": [
+    {
+      title: "First Swim Lesson",
+      description: "A boy attending his first swimming lesson at the municipal pool.",
+      transcript: "[M5]First Swim Lesson.[M2] Today was my first swimming lesson at the municipal pool. Coach David gave each student a bright yellow kickboard and taught us how to flutter our legs in the water for forty-five minutes.",
+      questions: [
+        { id: "s58q1", text: "What did Coach David give to each student?", options: ["A bright yellow kickboard", "A blue pair of goggles", "A red life vest", "A green swim cap"], correct: "A bright yellow kickboard", category: "factual" },
+        { id: "s58q2", text: "How long did the students practice fluttering their legs?", options: ["Thirty minutes", "Thirty-five minutes", "Forty minutes", "Forty-five minutes"], correct: "Forty-five minutes", category: "numbers" }
+      ]
+    }
+  ],
+  "Section 59": [
+    {
+      title: "Borrowing a Library Book",
+      description: "A student checking out an adventure book at the school library.",
+      transcript: "[F5]Borrowing a Library Book.[F4] Hello Mrs. Clark, I would like to borrow 'Treasure Island' for my reading project. [F1] Certainly, Maria! Please scan your student ID card. You can keep this book for fourteen days before returning it.",
+      questions: [
+        { id: "s59q1", text: "Which book does Maria want to borrow?", options: ["Robin Hood", "Treasure Island", "Peter Pan", "Alice in Wonderland"], correct: "Treasure Island", category: "factual" },
+        { id: "s59q2", text: "For how many days may she keep the borrowed book?", options: ["Seven days", "Ten days", "Fourteen days", "Twenty-one days"], correct: "Fourteen days", category: "numbers" }
+      ]
+    }
+  ],
+  "Section 60": [
+    {
+      title: "Kite Flying in the Park",
+      description: "Friends flying kites on a windy spring afternoon.",
+      transcript: "[M5]Kite Flying in the Park.[M3] On Tuesday afternoon, Hasan and I brought our homemade diamond kites to the open park. The breeze was steady, and my purple kite flew high above the tallest mango tree for nearly an hour.",
+      questions: [
+        { id: "s60q1", text: "What color was the speaker's kite?", options: ["Red", "Blue", "Green", "Purple"], correct: "Purple", category: "factual" },
+        { id: "s60q2", text: "What tree did the kite soar high above?", options: ["A banyan tree", "A coconut palm", "A mango tree", "A pine tree"], correct: "A mango tree", category: "factual" }
+      ]
+    }
+  ],
+  "Section 61": [
+    {
+      title: "Morning Pet Care",
+      description: "Taking care of a playful kitten before leaving for school.",
+      transcript: "[F5]Morning Pet Care.[F2] Every day before heading to school, I take care of my little grey kitten, Whiskers. I pour fresh goat milk into her ceramic saucer and comb her soft fur with a mini brush for five minutes.",
+      questions: [
+        { id: "s61q1", text: "What is the name of the speaker's pet kitten?", options: ["Mitten", "Whiskers", "Snowy", "Bella"], correct: "Whiskers", category: "factual" },
+        { id: "s61q2", text: "What does the speaker pour into the kitten's ceramic saucer?", options: ["Warm water", "Fresh goat milk", "Chicken broth", "Tuna flakes"], correct: "Fresh goat milk", category: "factual" }
+      ]
+    }
+  ],
+  "Section 62": [
+    {
+      title: "Packing for Summer Camp",
+      description: "A boy packing his backpack for a three-day outdoor summer camp.",
+      transcript: "[M5]Packing for Summer Camp.[M4] Tomorrow morning at seven, the bus leaves for Green Hill Summer Camp. I packed three cotton T-shirts, a waterproof flashlight, a steel water flask, and my favorite notebook in my blue rucksack.",
+      questions: [
+        { id: "s62q1", text: "What time will the camp bus depart tomorrow morning?", options: ["Six o'clock", "Seven o'clock", "Eight o'clock", "Nine o'clock"], correct: "Seven o'clock", category: "numbers" },
+        { id: "s62q2", text: "What color is the boy's rucksack?", options: ["Red", "Green", "Blue", "Black"], correct: "Blue", category: "factual" }
+      ]
+    }
+  ],
+  "Section 63": [
+    {
+      title: "School Bus Journey",
+      description: "Children riding the yellow school bus and singing together.",
+      transcript: "[F5]School Bus Journey.[F3] Every weekday, Mr. Robert drives the big yellow school bus through our village. He stops at sixteen houses to collect all the pupils, and we always sing cheerful nursery rhymes during the ride.",
+      questions: [
+        { id: "s63q1", text: "Who is the driver of the yellow school bus?", options: ["Mr. David", "Mr. Robert", "Mr. Thomas", "Mr. James"], correct: "Mr. Robert", category: "factual" },
+        { id: "s63q2", text: "At how many houses does the bus stop to pick up pupils?", options: ["Twelve", "Fourteen", "Sixteen", "Eighteen"], correct: "Sixteen", category: "numbers" }
+      ]
+    }
   ]
 };

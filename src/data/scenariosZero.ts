@@ -450,5 +450,105 @@ export const scenariosZero: Record<string, Scenario[]> = {
         { id: "p45q1", text: "How much does the suitcase weigh?", options: ["15 kilograms", "18 kilograms", "20 kilograms", "28 kilograms"], correct: "18 kilograms", category: "numbers" }
       ]
     }
+  ],
+  "Section 46": [
+    {
+      title: "Train Platform",
+      description: "Railway station announcement of platform departure.",
+      transcript: "[M5]Train Platform.[F1]Attention passengers, the intercity express to Sylhet will depart from Platform 3.",
+      questions: [
+        { id: "p46q1", text: "Which platform will the train depart from?", options: ["Platform 1", "Platform 3", "Platform 5", "Platform 7"], correct: "Platform 3", category: "factual" }
+      ]
+    }
+  ],
+  "Section 47": [
+    {
+      title: "Locker Number",
+      description: "Gym locker key assignment.",
+      transcript: "[M5]Locker Number.[M3]Hello. Here is your locker key for today. Your locker is number 42.",
+      questions: [
+        { id: "p47q1", text: "What is the assigned locker number?", options: ["Number 24", "Number 34", "Number 42", "Number 52"], correct: "Number 42", category: "numbers" }
+      ]
+    }
+  ],
+  "Section 48": [
+    {
+      title: "Favorite Subject",
+      description: "School student's favorite academic subject.",
+      transcript: "[M5]Favorite Subject.[F4]Hi, I'm Nusrat. Out of all the subjects in school, I enjoy Mathematics the most.",
+      questions: [
+        { id: "p48q1", text: "Which subject does Nusrat enjoy the most?", options: ["History", "Geography", "Mathematics", "Biology"], correct: "Mathematics", category: "factual" }
+      ]
+    }
+  ],
+  "Section 49": [
+    {
+      title: "Ticket Price",
+      description: "Museum admission ticket price.",
+      transcript: "[M5]Ticket Price.[M4]Good afternoon. The adult entry ticket for the science museum is 50 taka.",
+      questions: [
+        { id: "p49q1", text: "How much is the adult entry ticket?", options: ["30 taka", "40 taka", "50 taka", "60 taka"], correct: "50 taka", category: "numbers" }
+      ]
+    }
+  ],
+  "Section 50": [
+    {
+      title: "Office Desk",
+      description: "Workstation desk assignment in an office.",
+      transcript: "[M5]Office Desk.[F2]Welcome to the new floor. Your assigned workstation is Desk 19 by the window.",
+      questions: [
+        { id: "p50q1", text: "Which desk number is assigned to the employee?", options: ["Desk 9", "Desk 15", "Desk 19", "Desk 29"], correct: "Desk 19", category: "numbers" }
+      ]
+    }
+  ],
+  "Section 51": [
+    {
+      title: "Birth Month",
+      description: "A person's month of birth.",
+      transcript: "[M5]Birth Month.[M2]Hello, my name is Farhan. I was born in November.",
+      questions: [
+        { id: "p51q1", text: "In which month was Farhan born?", options: ["September", "October", "November", "December"], correct: "November", category: "factual" }
+      ]
+    }
+  ],
+  "Section 52": [
+    {
+      title: "Flight Duration",
+      description: "Announced flight travel time.",
+      transcript: "[M5]Flight Duration.[F5]This is your captain speaking. Our flight time to Bangkok today will be 2 hours and 30 minutes.",
+      questions: [
+        { id: "p52q1", text: "How long will the flight take?", options: ["1 hour and 30 minutes", "2 hours and 15 minutes", "2 hours and 30 minutes", "3 hours"], correct: "2 hours and 30 minutes", category: "factual" }
+      ]
+    }
+  ],
+  "Section 53": [
+    {
+      title: "Favorite Fruit",
+      description: "Morning breakfast fruit choice.",
+      transcript: "[M5]Favorite Fruit.[M1]Good morning! Every morning with breakfast, I love eating a fresh ripe papaya.",
+      questions: [
+        { id: "p53q1", text: "What fruit does the speaker love eating with breakfast?", options: ["Watermelon", "Papaya", "Guava", "Pineapple"], correct: "Papaya", category: "factual" }
+      ]
+    }
+  ],
+  "Section 54": [
+    {
+      title: "Apartment Number",
+      description: "Residential apartment unit number.",
+      transcript: "[M5]Apartment Number.[F3]Please deliver the parcel to Green Tower, Apartment 4B.",
+      questions: [
+        { id: "p54q1", text: "What is the delivery apartment number?", options: ["Apartment 2B", "Apartment 3A", "Apartment 4B", "Apartment 5B"], correct: "Apartment 4B", category: "factual" }
+      ]
+    }
+  ],
+  "Section 55": [
+    {
+      title: "Shoe Size",
+      description: "Footwear size requested at a store.",
+      transcript: "[M5]Shoe Size.[M3]Excuse me, do you have these black running shoes in European size 41?",
+      questions: [
+        { id: "p55q1", text: "What shoe size is the customer looking for?", options: ["Size 39", "Size 40", "Size 41", "Size 42"], correct: "Size 41", category: "numbers" }
+      ]
+    }
   ]
 };
